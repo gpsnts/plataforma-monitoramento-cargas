@@ -89,7 +89,7 @@ export function CargaDetailDialog({ carga, onClose }: { carga: CargaConsolidada 
 
           <div className="bg-info-soft border border-info/20 rounded-xl p-4 flex gap-3">
             <Info className="w-5 h-5 text-info flex-shrink-0 mt-0.5" />
-            <p className="text-sm text-info-foreground/90 text-foreground/80">
+            <p style={{ color: '#1c398e' }} className="text-sm text-info-foreground/90 text-foreground/80">
               Ao enviar esta carga para monitoramento, todos esses dados serão preenchidos
               automaticamente no portal Evolog sem necessidade de intervenção manual.
             </p>
