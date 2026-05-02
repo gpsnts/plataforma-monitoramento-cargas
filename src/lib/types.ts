@@ -3,27 +3,27 @@ export type CargaStatus = "pendente" | "em_transito" | "monitorada" | "entregue"
 export interface Motorista {
   id: string;
   nome: string;
-  cpf: string;
-  cnh: string;
+  cpf: string | null;
+  cnh: string | null;
   telefone: string | null;
 }
 
 export interface Veiculo {
   id: string;
   placa: string;
-  tipo: string;
-  capacidade_kg: number;
-  ocupacao_percent: number;
+  tipo: string | null;
+  capacidade_kg: number | null;
+  ocupacao_percent: number | null;
 }
 
 export interface CargaConsolidada {
   id: string;
   codigo: string;
   data: string;
-  origem: string;
-  destino: string;
-  peso_kg: number;
-  volume_m3: number;
+  origem: string | null;
+  destino: string | null;
+  peso_kg: number | null;
+  volume_m3: number | null;
   status: CargaStatus;
   monitorada: boolean;
   motorista: Motorista | null;

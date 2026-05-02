@@ -129,7 +129,7 @@ export default function Index() {
     const rows = ordenadas.map(c => [
       c.codigo, c.data, c.motorista?.nome ?? "", c.motorista?.cpf ?? "",
       c.veiculo?.placa ?? "", c.veiculo?.tipo ?? "",
-      c.origem, c.destino, c.peso_kg, c.volume_m3, c.status, c.monitorada ? "Sim" : "Não"
+      c.origem ?? "", c.destino ?? "", c.peso_kg ?? "", c.volume_m3 ?? "", c.status, c.monitorada ? "Sim" : "Não"
     ].join(";"));
     const csv = [header, ...rows].join("\n");
     const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
@@ -156,7 +156,6 @@ export default function Index() {
             <h2 className="font-semibold text-foreground">Sistema Automatizado:</h2>
             <p className="text-sm text-foreground/80 mt-1">
               Os dados são consultados e consolidados automaticamente de múltiplos endpoints da API Evolog.
-              O preenchimento das solicitações de monitoramento é realizado sem intervenção manual.
             </p>
           </div>
         </section>
@@ -265,8 +264,8 @@ export default function Index() {
                     <td className="px-4 py-3 text-muted-foreground">{new Date(c.data).toLocaleDateString("pt-BR")}</td>
                     <td className="px-4 py-3"><span className="inline-flex items-center gap-1.5"><UserIcon className="w-3.5 h-3.5 text-muted-foreground" />{c.motorista?.nome ?? "—"}</span></td>
                     <td className="px-4 py-3"><span className="inline-flex items-center gap-1.5"><Truck className="w-3.5 h-3.5 text-muted-foreground" />{c.veiculo?.placa ?? "—"}</span></td>
-                    <td className="px-4 py-3"><span className="inline-flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-success" />{c.origem} → {c.destino}</span></td>
-                    <td className="px-4 py-3 text-right font-medium">{c.peso_kg.toLocaleString("pt-BR")}</td>
+                    <td className="px-4 py-3"><span className="inline-flex items-center gap-1.5"><MapPin className="w-3.5 h-3.5 text-success" />{c.origem ?? "—"} → {c.destino ?? "—"}</span></td>
+                    <td className="px-4 py-3 text-right font-medium">{c.peso_kg != null ? c.peso_kg.toLocaleString("pt-BR") : "—"}</td>
                     <td className="px-4 py-3"><StatusBadge status={c.status} /></td>
                     <td className="px-4 py-3 text-right">
                       <Button variant="link" size="sm" className="text-primary h-auto p-0" onClick={() => setDetalhe(c)}>
@@ -298,7 +297,7 @@ export default function Index() {
         </section>
       </main>
 
-      <CargaDetailDialog carga={detalhe} onClose={() => setDetalhe(null)} />
+      <CargaDetailDialog carga={detalhe} onClose={() => setDetalhe(null)} onUpdated={() => { consultar(); setDetalhe(null); }} />
     </div>
   );
 }

@@ -19,49 +19,49 @@ export type Database = {
           codigo: string
           created_at: string
           data: string
-          destino: string
+          destino: string | null
           id: string
           monitorada: boolean
           motorista_id: string | null
           observacoes: string | null
-          origem: string
-          peso_kg: number
+          origem: string | null
+          peso_kg: number | null
           status: Database["public"]["Enums"]["carga_status"]
           updated_at: string
           veiculo_id: string | null
-          volume_m3: number
+          volume_m3: number | null
         }
         Insert: {
           codigo: string
           created_at?: string
           data: string
-          destino: string
+          destino?: string | null
           id?: string
           monitorada?: boolean
           motorista_id?: string | null
           observacoes?: string | null
-          origem: string
-          peso_kg?: number
+          origem?: string | null
+          peso_kg?: number | null
           status?: Database["public"]["Enums"]["carga_status"]
           updated_at?: string
           veiculo_id?: string | null
-          volume_m3?: number
+          volume_m3?: number | null
         }
         Update: {
           codigo?: string
           created_at?: string
           data?: string
-          destino?: string
+          destino?: string | null
           id?: string
           monitorada?: boolean
           motorista_id?: string | null
           observacoes?: string | null
-          origem?: string
-          peso_kg?: number
+          origem?: string | null
+          peso_kg?: number | null
           status?: Database["public"]["Enums"]["carga_status"]
           updated_at?: string
           veiculo_id?: string | null
-          volume_m3?: number
+          volume_m3?: number | null
         }
         Relationships: [
           {
@@ -82,24 +82,24 @@ export type Database = {
       }
       motoristas: {
         Row: {
-          cnh: string
-          cpf: string
+          cnh: string | null
+          cpf: string | null
           created_at: string
           id: string
           nome: string
           telefone: string | null
         }
         Insert: {
-          cnh: string
-          cpf: string
+          cnh?: string | null
+          cpf?: string | null
           created_at?: string
           id?: string
           nome: string
           telefone?: string | null
         }
         Update: {
-          cnh?: string
-          cpf?: string
+          cnh?: string | null
+          cpf?: string | null
           created_at?: string
           id?: string
           nome?: string
@@ -186,28 +186,28 @@ export type Database = {
       }
       veiculos: {
         Row: {
-          capacidade_kg: number
+          capacidade_kg: number | null
           created_at: string
           id: string
-          ocupacao_percent: number
+          ocupacao_percent: number | null
           placa: string
-          tipo: string
+          tipo: string | null
         }
         Insert: {
-          capacidade_kg?: number
+          capacidade_kg?: number | null
           created_at?: string
           id?: string
-          ocupacao_percent?: number
+          ocupacao_percent?: number | null
           placa: string
-          tipo: string
+          tipo?: string | null
         }
         Update: {
-          capacidade_kg?: number
+          capacidade_kg?: number | null
           created_at?: string
           id?: string
-          ocupacao_percent?: number
+          ocupacao_percent?: number | null
           placa?: string
-          tipo?: string
+          tipo?: string | null
         }
         Relationships: []
       }
