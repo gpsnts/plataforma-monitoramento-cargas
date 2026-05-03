@@ -1,4 +1,4 @@
-# TODO# Plataforma de Monitoramento de Cargas
+# Plataforma de Monitoramento de Cargas
 
 ![Vite](https://img.shields.io/badge/Vite-FFD43B?style=flat&logo=vite&logoColor=333333)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
