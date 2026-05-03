@@ -4,7 +4,6 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat&logo=supabase&logoColor=white)
-![Vitest](https://img.shields.io/badge/Vitest-646cff?style=flat&logo=vitest&logoColor=white)
 
 Aplicação frontend (Vite + React + TypeScript) para visualizar e gerenciar cargas/entregas, integrada ao Supabase para autenticação e persistência. Foi usado a plataforma [Lovable](https://lovable.dev/) para a estrutura inicial do projeto.
 
