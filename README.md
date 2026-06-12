@@ -8,7 +8,7 @@
 Aplicação frontend (Vite + React + TypeScript) para visualizar e gerenciar cargas/entregas, integrada ao Supabase para autenticação e persistência. Foi usado a plataforma [Lovable](https://lovable.dev/) para a estrutura inicial do projeto.
 
 **Atenção!**
-É necessário criar um usuário para usar a plataforma
+É necessário criar um usuário para usar a plataforma via "Criar Conta"
 
 **Resumo rápido**
 - Interface: React + TypeScript (Vite)
