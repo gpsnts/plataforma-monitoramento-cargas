@@ -14,7 +14,7 @@ Aplicação frontend (Vite + React + TypeScript) para visualizar e gerenciar car
 - Interface: React + TypeScript (Vite)
 - Estilo: Tailwind CSS
 - Banco / Auth: Supabase (migrations em `supabase/migrations`)
-- Estrutura de componentes em `src/components`
+- Estrutura de componentes em `src/components` 
 
 ## Tópicos
 - **Visão geral**
